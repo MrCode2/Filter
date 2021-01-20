@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Filter</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div id="input_url">
+                <div class="add">
+                    <input type="text" name="image" placeholder="Paste URL" id="image_input" class="input">
+                    <button id="add"><img src="plus.svg" alt="Add"></button>
+                </div>
+
+                <button id="delete_image"><img src="trash.svg" alt="Trush"><span>delete</span></button>
+            </div>
+            <div class="image_block">
+                <div id="image"></div>
+                <div id="image1"></div>
+
+            </div>
+            <div id="filter_settings">
+
+                <div id="blur_div">
+                    <p>blur</p>
+                    <input type="range" class="fil" id="blur" min="0" max="100" value="0" onchange="filter()">
+                    <div id="blur_result">0px</div>
+                </div>
+
+                <div id="brightness_div">
+                    <p>brightness</p>
+                    <input type="range" class="fil" id="brightness" min="0" max="250" value="100" onchange="filter()">
+                    <div id="brightness_result">100%</div>
+                </div>
+
+                <div id="contrast_div">
+                    <p>contrast</p>
+                    <input type="range" class="fil" id="contrast" min="0" max="250" value="100" onchange="filter()">
+                    <div id="contrast_result">100%</div>
+                </div>
+
+                <div id="grayscale_div">
+                    <p>grayscale</p>
+                    <input type="range" class="fil" id="grayscale" min="0" max="100" value="0" onchange="filter()">
+                    <div id="grayscale_result">0%</div>
+                </div>
+
+                <div id="hueRotate_div">
+                    <p>hueRotate</p>
+                    <input type="range" class="fil" id="hueRotate" min="0" max="360" value="0" onchange="filter()">
+                    <div id="hueRotate_result">0deg</div>
+                </div>
+
+                <div id="invert_div">
+                    <p>invert</p>
+                    <input type="range" class="fil" id="invert" min="0" max="100" value="0" onchange="filter()">
+                    <div id="invert_result">0%</div>
+                </div>
+
+                <div id="opacity_div">
+                    <p>opacity</p>
+                    <input type="range" class="fil" id="opacity" min="0" max="100" value="100" onchange="filter()">
+                    <div id="opacity_result">100%</div>
+                </div>
+
+                <div id="saturate_div">
+                    <p>saturate</p>
+                    <input type="range" class="fil" id="saturate" min="0" max="250" value="100" onchange="filter()">
+                    <div id="saturate_result">100%</div>
+                </div>
+
+                <div id="sepia_div">
+                    <p>sepia</p>
+                    <input type="range" class="fil" id="sepia" min="0" max="100" value="0" onchange="filter()">
+                    <div id="sepia_result">0%</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
